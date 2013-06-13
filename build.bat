@@ -1,1 +1,1 @@
-../emscripten/emcc --bind -o quick_example.js embindings.cpp
+../emscripten/emcc --bind -o quick_example.js embindings.cpp quick_example.cpp
