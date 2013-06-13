@@ -5,4 +5,9 @@
 
 float lerp(float a, float b, float t);
 
+struct myStruct {
+    int x;
+    int y;
+};
+
 #endif
