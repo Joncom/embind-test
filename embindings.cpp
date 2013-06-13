@@ -1,6 +1,6 @@
 // embindings.cpp
 #include <emscripten/bind.h>
-#include "quick_example.cpp"
+#include "quick_example.h"
 
 using namespace emscripten;
 
