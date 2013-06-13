@@ -10,6 +10,6 @@ struct myStruct {
     int y;
 };
 
-struct getStruct();
+myStruct getStruct();
 
 #endif
