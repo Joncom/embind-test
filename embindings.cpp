@@ -19,6 +19,7 @@ EMSCRIPTEN_BINDINGS(my_module) {
 		.constructor<>()
 		.function("getX", &getX)
 		.function("setX", &setX)
+		.property("x", &getX, &setX)
 		;
 
 	function("getStruct", &getStruct);
