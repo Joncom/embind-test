@@ -17,4 +17,11 @@ EMSCRIPTEN_BINDINGS(my_module) {
         ;
 
     function("getStruct", &getStruct);
+
+    class_<MyClass>("MyClass")
+        .constructor<int, std::string>()
+        .function("incrementX", &MyClass::incrementX)
+        .property("x", &MyClass::getX, &MyClass::setX)
+        .class_function("getStringFromInstance", &MyClass::getStringFromInstance)
+        ;
 }
