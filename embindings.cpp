@@ -5,6 +5,7 @@
 using namespace emscripten;
 
 int getX(const myStruct& s) { return s.x; }
+void setX(myStruct& s, int newX) { s.x = newX; }
 
 EMSCRIPTEN_BINDINGS(my_module) {
 	function("lerp", &lerp);
@@ -16,7 +17,8 @@ EMSCRIPTEN_BINDINGS(my_module) {
 
 	class_<myStruct>("myStruct")
 		.constructor<>()
-		.function("getX", &getX);
+		.function("getX", &getX)
+		.function("setX", &setX)
 		;
 
 	function("getStruct", &getStruct);
